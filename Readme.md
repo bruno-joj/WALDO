@@ -13,20 +13,20 @@
 WALDO é um modelo de inteligência artificial para detecção, baseado em uma robusta estrutura YOLO-v8 e em um pipeline próprio de dados sintéticos.
 **O modelo é capaz de detectar as seguintes classes de objetos em imagens aéreas capturadas a partir de aproximadamente 9 metros de altitude até imagens de satélite!**
 
-**Classes de saída:**
+Classes de saída:
 
-0 → ‘VeículoLeve’ → todos os tipos de automóveis civis, incluindo picapes, vans etc. 🚗🏎️🚓🚐🚑
-1 → ‘Pessoa’ → pessoas em geral, inclusive em bicicletas ou nadando no mar 🧍‍♀️🕺💃🧜🏽‍♀️🏂🧞
-2 → ‘Edificação’ → todos os tipos de construções 🕌🏛️🏭🏡
-3 → ‘Poste’ → postes de energia, de utilidade pública ou qualquer estrutura vertical fina que deva ser evitada por drones 🎏
-4 → ‘Embarcação’ → barcos, navios, canoas, caiaques, pranchas de surfe etc. 🚢🏄
-5 → ‘Bicicleta’ → bicicletas, ciclomotores, motocicletas e afins 🚲
-6 → ‘Contêiner’ → contêineres de carga, inclusive sobre caminhões articulados 📦🏗️
-7 → ‘Caminhão’ → veículos comerciais de grande porte, incluindo caminhões articulados e baús sobre chassis 🚚
-8 → ‘TanqueDeGás’ → tanques cilíndricos como botijões de gás ou silos de grãos 🫙
-10 → ‘Escavadeira’ → veículos de construção como tratores, retroescavadeiras, etc. 🚜
-11 → ‘PainéisSolares’ → painéis solares ▪️🌞▪️
-12 → ‘Ônibus’ → ônibus 🚌
+0 → ‘VeículoLeve’ → todos os tipos de automóveis civis, incluindo picapes, vans etc. 🚗🏎️🚓🚐🚑<br>
+1 → ‘Pessoa’ → pessoas em geral, inclusive em bicicletas ou nadando no mar 🧍‍♀️🕺💃🧜🏽‍♀️🏂🧞<br>
+2 → ‘Edificação’ → todos os tipos de construções 🕌🏛️🏭🏡<br>
+3 → ‘Poste’ → postes de energia, de utilidade pública ou qualquer estrutura vertical fina que deva ser evitada por drones 🎏<br>
+4 → ‘Embarcação’ → barcos, navios, canoas, caiaques, pranchas de surfe etc. 🚢🏄<br>
+5 → ‘Bicicleta’ → bicicletas, ciclomotores, motocicletas e afins 🚲<br>
+6 → ‘Contêiner’ → contêineres de carga, inclusive sobre caminhões articulados 📦🏗️<br>
+7 → ‘Caminhão’ → veículos comerciais de grande porte, incluindo caminhões articulados e baús sobre chassis 🚚<br>
+8 → ‘TanqueDeGás’ → tanques cilíndricos como botijões de gás ou silos de grãos 🫙<br>
+10 → ‘Escavadeira’ → veículos de construção como tratores, retroescavadeiras, etc. 🚜<br>
+11 → ‘PainéisSolares’ → painéis solares ▪️🌞▪️<br>
+12 → ‘Ônibus’ → ônibus 🚌<br>
 
 > Em geral, quanto menor o número da classe, melhor treinado está o modelo para aquela categoria.
 >
