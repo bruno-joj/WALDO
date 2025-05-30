@@ -1,167 +1,140 @@
-W.A.L.D.O.
-Whereabouts Ascertainment for Low-lying Detectable Objects 
----------------------------------------------------------------------
+**W\.A.L.D.O.**
+**Localização e Determinação de Objetos Detectáveis em Baixa Altitude**
+-----------------------------------------------------------------------
 
+## /!\ Atenção: as versões mais recentes do modelo estão disponíveis no Hugging Face [aqui](https://huggingface.co/StephanST/WALDO30)
 
-## /!\ Look out: the latest versions of the model are on HF [here](https://huggingface.co/StephanST/WALDO30)
+[![Prévia do WALDO 3.0](https://i.imgur.com/hGghrLn.jpeg)](https://www.youtube.com/watch?v=1y5y9yklj2U)
 
-[![WALDO 3.0 preview vid](https://i.imgur.com/hGghrLn.jpeg)](https://www.youtube.com/watch?v=1y5y9yklj2U)
+## **Bem-vindo ao lançamento público do WALDO v3.0**
 
-Welcome to the WALDO v3.0 public release
----------------------------------------------------------------------
+### O QUE É O WALDO?
 
+WALDO é um modelo de inteligência artificial para detecção, baseado em uma robusta estrutura YOLO-v8 e em um pipeline próprio de dados sintéticos.
+**O modelo é capaz de detectar as seguintes classes de objetos em imagens aéreas capturadas a partir de aproximadamente 9 metros de altitude até imagens de satélite!**
 
-WHAT IS WALDO?
+**Classes de saída:**
 
-WALDO is a detection AI model, based on a large YOLO-v8 backbone and my own
-synthetic data pipeline. **The model is capable of detecting these classes 
-of items in overhead imagery ranging in altitude from about 30 feet to 
-satellite imagery!**
+0 → ‘VeículoLeve’ → todos os tipos de automóveis civis, incluindo picapes, vans etc. 🚗🏎️🚓🚐🚑
+1 → ‘Pessoa’ → pessoas em geral, inclusive em bicicletas ou nadando no mar 🧍‍♀️🕺💃🧜🏽‍♀️🏂🧞
+2 → ‘Edificação’ → todos os tipos de construções 🕌🏛️🏭🏡
+3 → ‘Poste’ → postes de energia, de utilidade pública ou qualquer estrutura vertical fina que deva ser evitada por drones 🎏
+4 → ‘Embarcação’ → barcos, navios, canoas, caiaques, pranchas de surfe etc. 🚢🏄
+5 → ‘Bicicleta’ → bicicletas, ciclomotores, motocicletas e afins 🚲
+6 → ‘Contêiner’ → contêineres de carga, inclusive sobre caminhões articulados 📦🏗️
+7 → ‘Caminhão’ → veículos comerciais de grande porte, incluindo caminhões articulados e baús sobre chassis 🚚
+8 → ‘TanqueDeGás’ → tanques cilíndricos como botijões de gás ou silos de grãos 🫙
+10 → ‘Escavadeira’ → veículos de construção como tratores, retroescavadeiras, etc. 🚜
+11 → ‘PainéisSolares’ → painéis solares ▪️🌞▪️
+12 → ‘Ônibus’ → ônibus 🚌
 
+> Em geral, quanto menor o número da classe, melhor treinado está o modelo para aquela categoria.
+>
+> Para usuários de versões anteriores: observe que as classes de uso militar e detecção de fumaça foram removidas. Este projeto é um software livre voltado para aplicações civis e não se destina a fins militares.
 
-Output classes:
+---
 
-0 -> 'LightVehicle'  --> all kinds of civilan cars, including pickup trucks, vans etc... 🚗🏎️🚓🚐🚑 </br>
-1 -> 'Person' --> people! all kinds of people including ones that are on bikes or swimming in the sea 🧍‍♀️🕺💃🧜🏽‍♀️🏂🧞</br> 
-2 -> 'Building' --> all kinds of buildings 🕌🏛️🏭🏡</br>
-3 -> 'UPole' --> utility poles, power poles, anything thin and sticking up that you should avoid with a drone 🎏</br>
-4 -> 'Boat' --> boats, ships, canoes, kayaks, surf boards... all the floaty stuff 🚢🏄</br>
-5 -> 'Bike' --> bikes, mopeds, motorbikes, all stuff with 2 wheels 🚲</br>
-6 -> 'Container' --> shipping containers, including on the back of an articulated truck... 📦🏗️</br>
-7 -> 'Truck' --> large commercial vehicles including articulated trucks or big box-on-chassis delivery trucks 🚚</br>
-8 -> 'Gastank'--> cylindrical tanks such as butane tanks and gas expansion tanks, or grain silos... pretty much anything that looks cylindrical for storing liquids 🫙</br>
-10 -> 'Digger' --> all kinds of construction vehicles, including tractors and construction gear 🚜</br>
-11 -> 'Solarpanels' --> solar panels ▪️🌞▪️</br>
-12 -> 'Bus' --> a bus 🚌</br>
+### ONDE ESTÁ O WALDO?
 
---> In general the lower the class number the better-trained you can expect it to be.
-For users of previous versions of WALDO: note that I removed the military class and smoke detection. This is meant to be a FOSS tool for civilian use and I don't want to pursue making it work for military applications.
+Disponível no Hugging Face: [https://huggingface.co/StephanST/WALDO30](https://huggingface.co/StephanST/WALDO30)
 
+Há também versões ligeiramente otimizadas disponíveis à venda no Gumroad:
+[https://6228189440665.gumroad.com/l/WALDOv3](https://6228189440665.gumroad.com/l/WALDOv3)
+Essas versões estão à venda como forma de patrocínio ao projeto. Se o modelo gratuito for útil para você, considere adquirir a versão aprimorada — mas a escolha é inteiramente sua.
 
----------------------------------------------------------------------
+\[![Melhoria de desempenho no modelo P2](https://i.imgur.com/VKa5NN5.png)]
 
-WHERE IS WALDO?
+Os arquivos seguem a licença MIT e podem ser compartilhados livremente, inclusive para uso comercial. A venda visa apenas compensar os custos de desenvolvimento e manter o projeto como software livre.
 
-Right here on HF -> https://huggingface.co/StephanST/WALDO30
+---
 
-Note there are a couple more models that have slightly better performance over on Gumroad here: https://6228189440665.gumroad.com/l/WALDOv3
-Those are for sale as a kind of sponsorship for the project: if you find value in the free ones here you can buy those for a nice little performance boost... but it's entirey up to you! 
+### PARA QUE SERVE?
 
+Atualmente, o WALDO está sendo utilizado em:
 
-[![P2 model performance boost](https://i.imgur.com/VKa5NN5.png)]
+1. Ações de resposta a desastres naturais
+2. Monitoramento de reservas naturais (detecção de intrusos)
+3. Cálculo de ocupação (estacionamentos, por exemplo)
+4. Monitoramento de infraestrutura
+5. Acompanhamento de obras
+6. Gestão de fluxo de tráfego
+7. Contagem de multidões
+8. Aplicações artísticas com IA
+9. Segurança em voos de drones (evitando pessoas/veículos no solo)
+10. Muitas outras aplicações criativas...
 
+A principal motivação para disponibilizar o WALDO gratuitamente é justamente acompanhar essas incríveis utilizações. Compartilhe comigo o que você construiu!
 
-In both cases the actual files are MIT license and you can freely share them, so if someone gives you the ones from Gumroad you are free yo use them including commercially. It's really just a way to offset some of the work and compute that went into making this project and keeping it FOSS.
+---
 
+### PARA ENTUSIASTAS DE IA
 
----------------------------------------------------------------------                                                                                                                                                               
+Conjunto de modelos YOLOv8 treinados com base em dados sintéticos e semi-sintéticos próprios.
+No momento, o conjunto de dados não será divulgado.
 
-WHAT IS IT GOOD FOR?
+Os pesos estão totalmente abertos, possibilitando ampla flexibilidade de implantação!
 
-People are currently using versions of WALDO for:
-1. disaster recovery
-2. monitoring wildlife sanctuaries (intruder detection)
-3. occupancy calculation (parking lots etc..)
-4. monitoring infrastructure 
-5. construction site monitoring
-6. traffic flow management
-7. crowd counting
-8. some fun AI art applications!
-9. drone safety (avoiding people / cars on the ground)
-10. lots of other fun stuff...
+---
 
-The main reason for me to make WALDO free has in fact been discovering all these cool applications. Let me know what you build!
+### COMO COMEÇAR COM O WALDO?
 
----------------------------------------------------------------------                                                                                                                                                               
+Consulte o código de exemplo disponível no repositório para executar os modelos e obter resultados visuais usando a excelente biblioteca de anotações **Supervision**, da Roboflow.
 
-FOR AI NERDS !
+---
 
-It's a set of YOLOv8 model, trained on my own datasets of synthetic and "augmented" / semi-synthetic data.
-I'm not going to release the dataset for the time being.
+### APROFUNDANDO
 
-The weights are completely open, allowing you to deploy in any number of ways this time! 
+Se você já tem experiência com implantação de modelos de IA, pode:
 
+1. Realizar o *fine-tuning* (ajuste fino) com seus próprios dados
+2. Desenvolver um sistema de inferência com janela deslizante otimizado para seu hardware local
+3. Quantizar os modelos para obter desempenho extremo em dispositivos simples
+4. Utilizar os modelos para rotular dados e treinar seus próprios algoritmos!
 
----------------------------------------------------------------------                                                                                
+Aproveite!
 
-HOW CAN I START WITH WALDO?  
+---
 
-Check out the boilerplate code in the repo to run the models and output pretty detections using the wonderful Supervision annotation library from Roboflow :) 
+### VERSÕES ANTERIORES
 
----------------------------------------------------------------------
+As versões anteriores foram descontinuadas. Esta é a única que permanecerá disponível online.
 
-GOING DEEPER
+---
 
-Of course if you know your way around deploying AI models there is a lot more you do
-with this release, inclusing:
+### PRECISA DE AJUDA COM ALGO?
 
-1. fine-tuning the models on your own data (if you know what you are doing, this is probably your starting point)
-2. building a nicely optimized sliding-window inference setup that works nicely on your edge hardware
-3. quantizing the models for super-duper edge performance on cheap devices
-4. using the models to annotate your own data and train something of your own!
+Claro! Entre em contato por e-mail:
+📧 [stephan.sturges@gmail.com](mailto:stephan.sturges@gmail.com)
 
+---
 
-Enjoy!
+### A DETECÇÃO DE ‘X’ NÃO ESTÁ FUNCIONANDO COMO ESPERADO?
 
----------------------------------------------------------------------
+Envie exemplos de imagens, vídeos ou amostras de dados para:
+📧 [stephan.sturges@gmail.com](mailto:stephan.sturges@gmail.com)
 
+---
 
-PREVIOUS VERSIONS
+### APOIE O PROJETO WALDO!
 
-I am retiring the old versions, this is the only one that will stay online.
+Visite a [página do WALDO no Gumroad](https://t.co/kRvhYkVxW2) para apoiar o desenvolvimento!
 
----------------------------------------------------------------------
+---
 
+### LICENÇA
 
-CAN YOU HELP ME WITH X? 
+Salvo indicação em contrário, todo o código desta versão é distribuído sob a licença a seguir:
 
-Sure, email me at stephan.sturges@gmail.com
+---
 
+**Licença MIT**
 
----------------------------------------------------------------------
+Copyright (c) 2024 Stephan Sturges / Aircortex.com
 
+Permissão concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e dos arquivos de documentação associados (“Software”), para utilizar o Software sem restrições, incluindo, sem limitação, os direitos de usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do Software, e permitir que outras pessoas a quem o Software for fornecido o façam, sujeitas às seguintes condições:
 
-DETECTION OF X ISN'T WORKING AS EXPECTED:
+O aviso de copyright acima e esta permissão deverão ser incluídos em todas as cópias ou partes substanciais do Software.
 
-I'd love to see example images, videos, sample data, etc at:
-stephan.sturges@gmail.com
+O SOFTWARE É FORNECIDO “NO ESTADO EM QUE SE ENCONTRA”, SEM GARANTIAS DE QUALQUER TIPO, EXPRESSAS OU IMPLÍCITAS, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM FIM ESPECÍFICO E NÃO INFRAÇÃO. EM NENHUMA HIPÓTESE OS AUTORES OU DETENTORES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER RECLAMAÇÃO, DANO OU OUTRA RESPONSABILIDADE, SEJA EM AÇÃO CONTRATUAL, DELITUAL OU DE OUTRA NATUREZA, DECORRENTE DE, OU RELACIONADA AO USO OU OUTRAS FORMAS DE INTERAÇÃO COM O SOFTWARE.
 
-
----------------------------------------------------------------------
-
-SUPPORT WALDO!
-
-Visit [![the WALDO gumroad page](https://t.co/kRvhYkVxW2)] to support the project!
-
----------------------------------------------------------------------
-
-
-LICENSE
-----------------------------------------------------------------------------
-
-Unless otherwise specified all code in this release is published with the 
-licence conditions below.
-----------------------------------------------------------------------------
-
-
-MIT License
-
-Copyright (c) 2024 Stephan Sturges / Aircortex.com 
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+---
